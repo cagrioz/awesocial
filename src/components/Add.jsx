@@ -34,7 +34,7 @@ function Add() {
     return (
         <>
             <Tooltip
-                onClick={setOpen.bind(true)}
+                onClick={(e) => setOpen(true)}
                 title="Add"
                 sx={{ position: 'fixed', bottom: 20, left: { xs: 'calc(50% - 25px)', md: 30 } }}
             >
@@ -44,7 +44,7 @@ function Add() {
             </Tooltip>
             <StyledModal
                 open={open}
-                onClose={setOpen.bind(false)}
+                onClose={(e) => setOpen(false)}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
